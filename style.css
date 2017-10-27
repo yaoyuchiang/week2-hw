@@ -61,6 +61,10 @@ input{
     
 }
 
+a:link{
+    color:#F5A855;
+}
+
 a:visited{
     color:#F5A855;
 }
