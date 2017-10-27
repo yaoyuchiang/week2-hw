@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>亂數長條圖/折線圖</title>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <svg class="rectpic" width="500" height="260"></svg>
+
+    <script>
+        function random(n, m) {
+            return Math.floor(Math.random() * (m - n + 1) + n);
+        }
+
+        for (var i = 0; i < 20; i = i + 1) {
+            var target = random(20, 300);
+            d3.select("svg")
+                .append("rect")
+                .attr("x", 10)
+                .attr("y", 10 + 12 * i)
+                .attr("width", target)
+                .attr("height", 10)
+                .attr("fill", "red");
+
+            d3.select("svg")
+                .append("text")
+                .attr("x", target + 15)
+                .attr("y", 20 + 12 * i)
+                .attr("font-family", "arial")
+                .attr("font-size", 12)
+                .text(target);
+
+
+
+        }
+
+    </script>
+
+    <svg class="poly" width="600" height="300">
+    </svg>
+
+    <script>
+        function random(n, m) {
+            return Math.floor(Math.random() * (m - n + 1) + n);
+        }
+
+        var points = "10,10 ";
+        
+
+        for (var i = 0; i < 20; i = i + 1) {
+            var goal = random(20, 300);
+            d3.select(".poly")
+                .append('circle')
+                .attr({
+                    cx: 10 + goal,
+                    cy: 10 + 12 * (i + 1),
+                    r: 3,
+                    fill: "red"
+                });
+
+            points = points + (10 + goal) + "," + (10 + 12 * (i + 1)) + " ";
+
+            d3.select(".poly")
+                .append("text")
+                .attr({
+                    x: goal + 20,
+                    y: 25 + 12 * i,
+                    "font-family": "arial",
+                    "font-size": 12,
+                })
+                .text(goal);
+
+        }
+        
+            points = points + "10,262";
+
+            d3.select(".poly")
+                .append("polyline")
+                .attr({
+                    "points": points,
+                    "stroke": "black",
+                    "fill": "rgba(0,0,0,0)"
+
+                })
+
+
+    </script>
+    
+    
+       <div class="link">
+   <a href="./page1.html">亂數按鈕/樂譜</a>
+   <a href="./index.html">瑪莉歐</a>
+   </div>
+
+
+
+
+    <!--
+//            d3.select("svg").append("line")
+//            .attr({x1=0, y1:45, x2:300, y2:45, stroke:"black"});
+//Not working, WHY?
+-->
+
+</body>
+
+</html>

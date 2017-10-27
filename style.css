@@ -1,0 +1,70 @@
+img{
+    height:100px;
+    position: relative;
+    left: 50px;
+}
+
+#box1{
+    width:200px;
+    height:100px;
+    
+    margin:0px 100px;
+}
+
+#box2{
+    width:190px;
+    height:40px;
+    background-color:aquamarine;
+    
+    border-top:5px double darkgreen;
+    border-right:5px solid darkgreen;
+    border-bottom:5px dashed darkgreen;
+    border-left:5px solid darkgreen;
+    
+    margin: 0px 100px;
+}
+
+#box3{
+    width:140px;
+    height:195px;
+    background-color: aquamarine;
+    
+    border-right:5px solid darkgreen;
+    border-bottom:5px solid darkgreen;
+    border-left:5px solid darkgreen;
+    
+    margin:0px 125px;
+    
+}
+
+.button{
+    margin:0px 0px 15px;
+}
+
+p{
+    width: 150px;
+    height: 30px;
+    border: 2px solid red;
+}
+
+input{
+    width:120px;
+    height:10px;
+}
+
+.music{
+    background-color:oldlace;
+}
+
+.link{
+    margin:25px 80px;
+    
+}
+
+a:visited{
+    color:#F5A855;
+}
+
+a:hover{
+    color:#849561;
+}
